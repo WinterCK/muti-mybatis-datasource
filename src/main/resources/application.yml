@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      test-master: # 主数据源
+        driverClassName: com.mysql.jdbc.Driver
+        username: root
+        password: SHIying542397
+        url: jdbc:mysql://39.97.171.17:3306/master_test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+      test-slave: # 从数据源
+        driverClassName: com.mysql.jdbc.Driver
+        username: root
+        password: SHIying542397
+        url: jdbc:mysql://39.97.171.17:3306/slave_test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
